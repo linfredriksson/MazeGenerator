@@ -3,19 +3,17 @@
 
 int main()
 {
-	int width = 4;
-	int height = 3;
-	unsigned char maze[] = {
-		0, 0, 0, 0,
-		1, 0, 1, 0,
-		1, 0, 0, 0
-	};
+	int mazeWidth = 20;
+	int mazeHeight = 10;
 
-	for (int y = 0; y < height; ++y)
+	unsigned char *maze = new unsigned char[mazeWidth * mazeHeight];
+	Maze::PrimsAlgorithm(mazeWidth, mazeHeight, maze);
+
+	for (int y = 0; y < mazeHeight; ++y)
 	{
-		for (int x = 0; x < width; ++x)
+		for (int x = 0; x < mazeWidth; ++x)
 		{
-			maze[x + y * width] ? printf("1") : printf("0");
+			maze[x + y * mazeWidth] ? printf("1") : printf("0");
 		}
 		printf("\n");
 	}
