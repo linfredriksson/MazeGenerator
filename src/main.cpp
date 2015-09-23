@@ -8,6 +8,7 @@ int main()
 
 	unsigned char *maze = new unsigned char[mazeWidth * mazeHeight];
 	Maze::PrimsAlgorithm(mazeWidth, mazeHeight, maze);
+	//Maze::Random(mazeWidth, mazeHeight, 0.25f, maze);
 
 	for (int y = 0; y < mazeHeight; ++y)
 	{
@@ -17,6 +18,8 @@ int main()
 		}
 		printf("\n");
 	}
+
+	delete[] maze;
 
 	int a; std::cin >> a; // pause program
 
