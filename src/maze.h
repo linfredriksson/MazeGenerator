@@ -6,9 +6,7 @@ namespace Maze
 	// https://en.wikipedia.org/wiki/Maze_generation_algorithm
 	void PrimsAlgorithm(int sizeX, int sizeY, unsigned char *maze);
 
-	// Random "maze" where all elements are random.
+	// Random "maze" where wall elements are randomly placed. The larger the fillRate
+	// the more walls will be placed.
 	void Random(const int sizeX, const int sizeY, const float fillRate, unsigned char *maze);
-
-	// Fill maze with one value
-	void Fill(const int sizeX, const int sizeY, const int value, unsigned char *maze);
 };
