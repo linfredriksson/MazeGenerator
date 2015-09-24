@@ -37,20 +37,20 @@ namespace Maze
 		}
 
 		// Fill maze with one value
-		void Fill(const int sizeX, const int sizeY, const int value, unsigned char *maze)
+		void Fill(int sizeX, int sizeY, int value, unsigned char *maze)
 		{
 			for (int i = 0; i < sizeX * sizeY; ++i)
 				maze[i] = value;
 		}
 	}
 
-	void PrimsAlgorithm(const int sizeX, const int sizeY, unsigned char *maze)
+	void PrimsAlgorithm(int sizeX, int sizeY, unsigned char *maze)
 	{
 		Fill(sizeX, sizeY, 1, maze);
 		PrimsAlgorithmStep(1, 1, 0, 0, sizeX, sizeY, maze);
 	}
 
-	void Random(const int sizeX, const int sizeY, const float fillRate, unsigned char *maze)
+	void Random(int sizeX, int sizeY, float fillRate, unsigned char *maze)
 	{
 		for (int i = 0; i < sizeX * sizeY; ++i)
 			maze[i] = (rand() % 1000 * 0.001 < fillRate) ? 1 : 0;

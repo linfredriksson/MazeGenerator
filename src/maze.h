@@ -8,5 +8,5 @@ namespace Maze
 
 	// Random "maze" where wall elements are randomly placed. The larger the fillRate
 	// the more walls will be placed.
-	void Random(const int sizeX, const int sizeY, const float fillRate, unsigned char *maze);
+	void Random(int sizeX, int sizeY, float fillRate, unsigned char *maze);
 };
