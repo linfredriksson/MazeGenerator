@@ -9,14 +9,7 @@ int main()
 	unsigned char *maze = new unsigned char[mazeWidth * mazeHeight];
 	Maze::PrimsAlgorithm(mazeWidth, mazeHeight, maze);
 
-	for (int y = 0; y < mazeHeight; ++y)
-	{
-		for (int x = 0; x < mazeWidth; ++x)
-		{
-			maze[x + y * mazeWidth] ? printf("#") : printf(" ");
-		}
-		printf("\n");
-	}
+	Maze::printToConsole(mazeWidth, mazeHeight, maze);
 
 	delete[] maze;
 

@@ -1,5 +1,6 @@
 #include "maze.h"
 #include <stdlib.h>
+#include <iostream>
 
 namespace Maze
 {
@@ -54,5 +55,15 @@ namespace Maze
 	{
 		for (int i = 0; i < sizeX * sizeY; ++i)
 			maze[i] = (rand() % 1000 * 0.001 < fillRate) ? 1 : 0;
+	}
+
+	void printToConsole(int sizeX, int sizeY, unsigned char *maze)
+	{
+		for (int y = 0; y < sizeY; ++y)
+		{
+			for (int x = 0; x < sizeX; ++x)
+				maze[x + y * sizeX] ? printf("#") : printf(" ");
+			printf("\n");
+		}
 	}
 };
