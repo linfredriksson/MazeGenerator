@@ -1,4 +1,4 @@
-#include <iostream>
+#include <stdio.h>
 #include "maze.h"
 
 int main()
@@ -13,7 +13,7 @@ int main()
 
 	delete[] maze;
 
-	int a; std::cin >> a; // pause program
+	int a; scanf_s("%d", &a); // pause program
 
 	return 0;
 }

@@ -1,6 +1,7 @@
 #include "maze.h"
+#include <time.h>
+#include <stdio.h>
 #include <stdlib.h>
-#include <iostream>
 
 namespace Maze
 {
@@ -47,6 +48,7 @@ namespace Maze
 
 	void PrimsAlgorithm(int sizeX, int sizeY, unsigned char *maze)
 	{
+		srand(time(NULL));
 		Fill(sizeX, sizeY, 1, maze);
 		PrimsAlgorithmStep(1, 1, 0, 0, sizeX, sizeY, maze);
 	}
