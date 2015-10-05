@@ -3,7 +3,7 @@
 
 int main()
 {
-	int mazeWidth = 101;
+	int mazeWidth = 99;
 	int mazeHeight = 21;
 
 	unsigned char *maze = new unsigned char[mazeWidth * mazeHeight];
